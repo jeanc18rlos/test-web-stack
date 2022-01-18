@@ -29,8 +29,6 @@ export const base = () => (
           description: 'Tech Lead'
         }
       }}
-    >
-      hello world
-    </EditUserPopup>
+    />
   </StoryWrapper>
 );
