@@ -4,7 +4,7 @@
     "module": "commonjs",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "types": ["react", "jest", "node", "@testing-library/jest-dom", "@types/jest"],
+    "types": ["react", "jest", "node"],
     "skipLibCheck": true,
     "sourceMap": true,
     "allowJs": false,
@@ -25,9 +25,16 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "experimentalDecorators": true,
-    "typeRoots": ["node_modules/@types", "src/types"],
-    "removeComments": false
+    "typeRoots": ["node_modules/@types", "src/types"]
   },
-  "include": ["src/**/*", ".storybook/**/*", "**/*.d.ts", "**/*.stories.tsx", "**/*.tsx"],
-  "exclude": ["node_modules", "build", "scripts", "**/*.test.tsx", "src/internal"]
+  "include": ["src/**/*", ".storybook/**/*", "**/*.d.ts"],
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    ".storybook",
+    "src/internal",
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx"
+  ]
 }

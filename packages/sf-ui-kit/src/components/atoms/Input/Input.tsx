@@ -3,6 +3,7 @@ import StyledInput from './styled/StyledInput';
 
 interface Props {
   label?: string;
+  id?: string;
   placeholder: string;
   onChange: any;
   onBlur?: any;

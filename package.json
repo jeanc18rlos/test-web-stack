@@ -9,6 +9,13 @@
   "workspaces": [
     "packages/*"
   ],
+  "scripts": {
+    "develop": "yarn workspace sf-website develop",
+    "clean": "yarn workspace sf-website clean",
+    "build": "yarn run clean && yarn workspace sf-website build",
+    "build:functions": "yarn workspace mcu-backend build",
+    "serve": "yarn workspace sf-website serve"
+  },
   "husky": {
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"

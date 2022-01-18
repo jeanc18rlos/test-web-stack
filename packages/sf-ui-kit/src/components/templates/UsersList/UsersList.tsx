@@ -3,16 +3,23 @@ import { EditUserPopup, Button, Input, UserCard } from '../../';
 import StyledUserList from './styled/StyledUsersList';
 import { useState, useEffect } from 'react';
 
-const UsersLists = () => {
+type UserListProps = {
+  currentPage?: number;
+  searchQuery?: string;
+  onchangePage?: (value: number) => void;
+  onchangeQuery?: (value: any) => void;
+};
+
+const UsersLists = (props: UserListProps) => {
   const [isModalOpen, openModal] = useState(false);
   const [state, setState] = useState({
     users: data,
     filteredUsers: data,
     selectedUser: data[0],
     selectedUserIndex: 0,
-    currentPage: 1,
+    currentPage: props.currentPage || 1,
     paginatedResults: data.slice(0, 5),
-    searchTerm: undefined
+    searchTerm: props.searchQuery || undefined
   });
 
   const onChange = (key: string, value: any) => {
@@ -59,10 +66,14 @@ const UsersLists = () => {
           }}
         >
           <Input
+            id="search"
             {...{
               value: state.searchTerm,
               placeholder: 'Search...',
-              onChange: (e: { target: { value: string; }; }) => mutateStateKey('searchTerm', e.target.value.trim() === '' ? undefined : e.target.value)
+              onChange: (e: { target: { value: string } }) => {
+                props.onchangeQuery && props.onchangeQuery(e.target.value.trim() === '' ? undefined : e.target.value);
+                mutateStateKey('searchTerm', e.target.value.trim() === '' ? undefined : e.target.value);
+              }
             }}
           />
         </div>
@@ -121,12 +132,13 @@ const UsersLists = () => {
       {state.filteredUsers.length > state.currentPage * 6 && (
         <div className="load__more">
           <Button
-            onClick={() =>
+            onClick={() => {
+              props.onchangePage && props.onchangePage(state.currentPage + 1);
               setState({
                 ...state,
                 currentPage: state.currentPage + 1
-              })
-            }
+              });
+            }}
             variant="primary"
           >
             LOAD MORE

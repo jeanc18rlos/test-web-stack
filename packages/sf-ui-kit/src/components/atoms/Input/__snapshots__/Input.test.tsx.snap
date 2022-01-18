@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Infobar should render correctly 1`] = `
+<Memo
+  label="Label"
+  onChange={[Function]}
+  placeholder="Placeholder"
+/>
+`;

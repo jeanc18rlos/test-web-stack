@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 25rem;
+  height: 21rem;
+  padding: 1rem;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  min-height: -webkit-fit-content;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  background: #ffffff;
+  border-radius: 8px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-filter: drop-shadow(0px 0px 0px rgba(0,0,0,0));
+  filter: drop-shadow(0px 0px 0px rgba(0,0,0,0));
+  -webkit-transition: filter 0.25s ease-in-out;
+  transition: filter 0.25s ease-in-out;
+}
+
+.c0:hover,
+.c0:focus,
+.c0.focus,
+.c0.hover {
+  -webkit-filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.1));
+  filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.1));
+}
+
+@media (max-width:75em) {
+  .c0 {
+    width: 20rem;
+    height: 16.8125rem;
+  }
+}
+
+@media (max-width:64em) {
+  .c0 {
+    width: 17.5rem;
+    height: 14.75rem;
+  }
+}
+
+@media (max-width:48em) {
+  .c0 {
+    width: 16rem;
+    height: 13.5rem;
+  }
+}
+
+<section
+  className="c0"
+>
+  Test
+</section>
+`;

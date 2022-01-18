@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Geocoder from 'react-mapbox-gl-geocoder';
-import Input from '../../atoms/Input';
+import { Input } from '../../atoms';
 
 const InputComponent = (props: any) => {
   return <Input {...{ ...props, placeholder: 'Location', label: 'Location' }} />;
