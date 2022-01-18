@@ -8,7 +8,7 @@ export default {
   component: Modal
 } as Meta;
 
-export const modal = () => {
+export const base = () => {
   const [isOpen, openModal] = useState(false);
 
   return (
