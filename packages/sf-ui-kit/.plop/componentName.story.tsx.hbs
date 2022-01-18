@@ -1,0 +1,23 @@
+import { Meta } from '@storybook/react';
+import {{ properCase name }} from ".";
+import { StoryHeader, StoryHeading, StoryWrapper } from '../../../utils/stories';
+
+export default {
+    title: 'Components/{{ properCase type }}s/{{ properCase name }}',
+    component: {{ properCase name }}   
+} as Meta;
+
+
+export const base = () => (
+   <StoryWrapper>
+      <StoryHeader name={`{{ properCase name }}`} />
+      <StoryHeading>
+        <h2>base</h2>
+      </StoryHeading>
+
+      <{{ properCase name }}>
+        {text("Label", "Default")}
+      </{{ properCase name }}>
+    </StoryWrapper>
+  
+);
