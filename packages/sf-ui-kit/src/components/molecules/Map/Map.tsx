@@ -45,8 +45,8 @@ const Map = ({ accessToken, coordinates }: MapProps) => {
       <MapComponent
         style="mapbox://styles/mapbox/streets-v9"
         containerStyle={{
-          height: '300px',
-          width: '300px'
+          height: '280px',
+          width: '280px'
         }}
         center={[state.viewport.longitude, state.viewport.latitude]}
       >
